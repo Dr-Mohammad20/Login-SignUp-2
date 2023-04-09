@@ -1,0 +1,257 @@
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.login {
+  animation-name: deActiveLogin;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  height: 100vh;
+  left: 0%;
+  align-items: center;
+  text-align: center;
+}
+
+.signUp {
+  animation-name: deActiveSignUp;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  height: 100vh;
+  right: 0%;
+  align-items: center;
+  text-align: center;
+}
+
+.loginActive {
+  animation-name: activeLogin;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  height: 100vh;
+  left: 0%;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+}
+
+.signUpActive {
+  animation-name: activeSignUp;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  height: 100vh;
+  right: 0%;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+}
+
+.signUpContainer {
+  border: 1px solid #3e9869;
+  border-radius: 10px;
+  width: 50%;
+  height: 85vh;
+  padding: 5px;
+  margin: 5px 25%;
+  box-shadow: 1px 5px 15px #102e1f;
+}
+
+.loginContainer {
+  border: 1px solid #3e9869;
+  border-radius: 10px;
+  width: 50%;
+  height: 45vh;
+  padding: 5px;
+  margin: 10% 25%;
+  box-shadow: 1px 5px 15px #102e1f;
+}
+
+.loginFormField {
+  display: flex;
+  flex-wrap: wrap;
+  height: 37%;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 2%;
+}
+
+.signUpFormField {
+  display: flex;
+  flex-wrap: wrap;
+  height: 19%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.formField label {
+  display: block;
+  margin: 2%;
+}
+
+.formInput {
+  display: block;
+  width: 70%;
+  height: 35px;
+  margin: 2% 15%;
+  border: 1px solid #3e9869;
+  border-radius: 10px;
+}
+
+.unComplete {
+  display: block;
+  width: 70%;
+  height: 35px;
+  margin: 2% 15%;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+.formInput:focus,
+.unComplete:focus {
+  outline: none;
+}
+
+.checkboxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 12%;
+  justify-content: center;
+  width: 60%;
+  margin: 2% 20%;
+  gap: 20px;
+}
+
+input[type="checkbox"] {
+  border: 2px solid #3e9869;
+  border-radius: 5px;
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  transition: all 0.2s ease-in;
+}
+
+input[type="checkbox"]:checked {
+  width: 18px;
+  height: 18px;
+  background-color: #63cc95;
+  border-radius: 50%;
+  border: 2px solid #0d131c;
+}
+
+.button {
+  width: 25%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #63cc95;
+}
+
+.button:hover {
+  background-color: #3e9869;
+  border: 1px solid #0d131c;
+}
+
+.balckSpan {
+  color: black;
+}
+
+span {
+  color: red;
+}
+
+@keyframes activeLogin {
+  from {
+    width: 25%;
+    background-color: #d9eed8;
+    position: absolute;
+  }
+
+  to {
+    width: 75%;
+    background-color: #bdf3bb;
+    position: absolute;
+  }
+}
+
+@keyframes activeSignUp {
+  from {
+    width: 25%;
+    background-color: #d9eed8;
+    position: absolute;
+  }
+
+  to {
+    background-color: #bdf3bb;
+    width: 75%;
+    position: absolute;
+  }
+}
+
+@keyframes deActiveLogin {
+  from {
+    width: 75%;
+    background-color: #bdf3bb;
+    position: absolute;
+  }
+
+  to {
+    width: 25%;
+    background-color: #d9eed8;
+    position: absolute;
+  }
+}
+
+@keyframes deActiveSignUp {
+  from {
+    width: 75%;
+    background-color: #bdf3bb;
+    position: absolute;
+  }
+
+  to {
+    width: 25%;
+    background-color: #d9eed8;
+    position: absolute;
+  }
+}
+
+@media (max-width: 440px) {
+  .formContainer {
+    width: 90%;
+    height: 80vh;
+    padding: 0;
+    margin: 0 5%;
+    font-size: smaller;
+  }
+
+  .formField input {
+    width: 90%;
+    height: 25px;
+    margin: 5px 5%;
+  }
+
+  .checkboxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: 5px 5%;
+    gap: 10px;
+  }
+
+  button {
+    font-size: smaller;
+    width: 75%;
+  }
+
+  p {
+    padding: 20% 2%;
+    font-size: smaller;
+  }
+
+  h1 {
+    font-size: medium;
+  }
+}
